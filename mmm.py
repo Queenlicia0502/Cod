@@ -3,7 +3,7 @@ class IOString():
  def __init__(self):
 
  # constructor to set default value
- def __init__(self):
+def __init__(self):
      self.str1 = ""
 
 # function to get input from user

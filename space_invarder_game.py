@@ -45,3 +45,32 @@ num_of_enemies = 6
 for _i in range(num_of_enemies):
     enemyImg.append(pygame.image.load('enemy.png'))
     enemyY_change.append( )
+    enemyY.append(random.randint(ENEMY_START_Y_MIN, ENEMY_SPEED_X_MAX))
+    enemyX_change.append(ENEMY_SPEED_x)
+    enemyY_change.append(ENEMY_SPEED_Y)
+
+# Bullet
+bulletImg = pygame.image.load('bullet.png')
+bulletX = 0
+bulletY = PLAYER_START_Y
+bulletX_change = 0
+bulletY_change = BULLET_SPEED_Y
+bullet_state = "ready"
+
+# Score
+score_value = 0
+font = pygame.font.Font('freesansbold.ttf', 32)
+textX = 10
+textY = 10
+
+# Game Over Text
+over_font = pygame.font.Font
+
+def show_score(x, y):
+    # Display the current score on the screen.
+    score = font.render("Score :"+ str(score_value), True, (255, 255, 255))
+    screen.blit(score, (x, y))
+
+def game_over_text():
+    # Display the game over text
+    over_text = over_font.render("GAME OVER", True, (255, 255, 255))
